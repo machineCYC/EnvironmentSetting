@@ -1,0 +1,40 @@
+增加新的repositories 
+1. $ cd /d/git
+2. 在github先新增一個repositories
+3. $ git clone HTTP
+4. $ git init
+
+創建空文件
+$ touch 檔名.py
+
+指定到特定資料夾
+$ cd /d/git/GitTUT
+$ cd /d/git/Evolutionary-Algorithms
+$ cd /d/git/Reinforcement-Learning
+$ cd /d/git/EnvironmentSetting
+$ cd /d/git/Face-Recognition
+$ cd /d/git/Hands-on-Machine-Learning-with-Scikit-Learn-and-TensorFlow
+$ cd /d/git/2017MLSpring_Hung-yi-Lee
+
+增加檔案
+$ git add 檔案名稱.py
+
+說明更改項目
+$ git commit -m "....."?
+
+上傳到github
+$ git push -u origin master
+
+刪除檔案
+$ git rm 檔名.py
+$ git commit -m "....."?
+
+查看狀況
+$ git status
+
+常看使用者姓名和email
+$ git config user.name
+$ git config user.email
+
+查看過去的提交紀錄
+$ git log

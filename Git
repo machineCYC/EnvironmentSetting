@@ -25,6 +25,9 @@ $ git commit -m "....."?
 上傳到github
 $ git push -u origin master
 
+更改A.py檔名為B.py
+$ git mv A.py B.py
+
 刪除檔案
 $ git rm 檔名.py
 $ git commit -m "....."?

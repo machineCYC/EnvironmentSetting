@@ -28,6 +28,9 @@ $ git push -u origin master
 更改A.py檔名為B.py
 $ git mv A.py B.py
 
+將A.txt搬移到my_folder資料夾下
+$ git mv A.txt my_folder/
+
 刪除檔案
 $ git rm 檔名.py
 $ git commit -m "....."?

@@ -31,12 +31,18 @@ $ git mv A.py B.py
 將A.txt搬移到my_folder資料夾下
 $ git mv A.txt my_folder/
 
+回上一層	
+$ cd ..
+
 刪除檔案
 $ git rm 檔名.py
 $ git commit -m "....."?
 
 查看狀況
 $ git status
+
+列出所在資料夾的檔案	
+$ ls
 
 常看使用者姓名和email
 $ git config user.name

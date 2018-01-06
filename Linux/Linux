@@ -25,6 +25,30 @@ $ rmdir folder                   刪除 folder 文件夾 (只能針對空文件�
 $ rm -I file                     刪除 file 文件 (如果數量多於三個會再次確認)
 $ rm -r folder                   刪除 folder 文件夾
 
+$ nano xxx.py                    編輯 xxx.py
+
+$ cat xxx.py                     顯示 xxx.py 文件內容
+$ cat xxx.py > yyy.py            將 xxx.py 文件內容放到 yyy.py (會覆蓋掉 yyy.py 原本的檔案)
+$ cat xxx.py yyy.py > zzz.py     將 xxx.py yyy.py 文件內容放到 zzz.py 通常是用在資料合併
+$ cat xxx >> zzz.py              將 xxx.py 文件內容放到 yyy.py 文件末尾
+
 $ clear 清空頻幕
 
+$ chmod [誰][如何修改][文件名]
+$ chmod u+r xxx.py               增加 user 在 xxx.py read 權限 
+$ chmod u-r xxx.py               減少 user 在 xxx.py read 權限 
+$ chmod ug-w xxx.py              減少 user 和 group 在 xxx.py write 權限 
+$ chmod a-x xxx.py               減少所有人(user group other)在 xxx.py excute 權限 
+如果想要用 ./t.py 執行 t.py 必須先增加x權限，並增加 #!/usr/bin/python3 在.py最上面，告訴電腦要用什麼來運行 
+
+$ ifconfig                                用來查詢ip位置
+
+$ ssh [要控制的用戶名]@[它的IP地址]         控制 linux電腦
+$ exit                                    離開 linux電腦
+
+$ sudo apt install net-tools              安裝 ifconfig
+$ sudo apt-get install openssh-server     安裝 SSH 服務 (mac Linux)
+
 $ sudo apt-get install ibus-zhuyin #注音輸入法
+
+PuTTY(https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) window 版 ssh

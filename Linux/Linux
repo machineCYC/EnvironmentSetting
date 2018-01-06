@@ -1,0 +1,30 @@
+$ cd Documents/    指定到 Documents 文件夾下
+$ cd -             返回 home 文件夾
+$ cd ../../        返回上兩層文件夾
+
+$ ls       顯示當前目錄下所有未隱藏檔案 
+$ ls -l    顯示當前目錄下所有未隱藏檔案的權限、用戶、時間
+$ ls -lh   顯示當前目錄下所有未隱藏檔案的權限、用戶、時間(for humman方便觀看)
+$ ls -a    顯示當前目錄下所有檔案
+
+$ touch file1    創建 file1 文件
+
+$ cp oldfile newfile             複製 oldfile 成為 newfile (不能保證重複命名不被覆蓋)
+$ cp -i oldfile newfile          複製 oldfile 成為 newfile (如果有重複文建會再次確認)
+$ cp file folder1/               複製 file 到 folder1 文件夾下
+$ cp -R folder1/ folder2/        複製 folder1 文件夾 成為 folder2 文件夾 
+$ cp file* floder2/              複製所有 file 開頭的文件到 folder2 文件夾 
+$ cp *file floder2/              複製所有 file 結尾的文件到 folder2 文件夾
+
+$ mv file folder1/               移動 file 到 folder1 文件夾下
+$ mv file filerename             重新命名 file 為 file1rename
+
+$ mkdir folder                   創建 folder 文件夾
+$ rmdir folder                   刪除 folder 文件夾 (只能針對空文件夾)
+
+$ rm -I file                     刪除 file 文件 (如果數量多於三個會再次確認)
+$ rm -r folder                   刪除 folder 文件夾
+
+$ clear 清空頻幕
+
+$ sudo apt-get install ibus-zhuyin #注音輸入法

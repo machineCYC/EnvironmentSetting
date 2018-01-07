@@ -48,6 +48,10 @@ $ exit                                    離開 linux電腦
 
 $ sudo apt install net-tools              安裝 ifconfig
 $ sudo apt-get install openssh-server     安裝 SSH 服務 (mac Linux)
+$ sudo apt-get install python-numpy
+$ sudo apt-get install python-scipy
+
+$ sudo apt install python3-pip
 
 $ sudo apt-get install ibus-zhuyin #注音輸入法
 

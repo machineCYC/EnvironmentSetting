@@ -15,6 +15,7 @@ $ cd /d/git/EnvironmentSetting
 $ cd /d/git/Face-Recognition
 $ cd /d/git/Hands-on-Machine-Learning-with-Scikit-Learn-and-TensorFlow
 $ cd /d/git/2017MLSpring_Hung-yi-Lee
+$ cd /d/git/Coursera
 
 增加檔案
 $ git add 檔案名稱.py

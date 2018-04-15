@@ -7,3 +7,10 @@
 [Ubuntu Linux](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop/02-UbuntuLinux)
 
 [Hadoop Single Node Cluster](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop/03-HadoopSingleNodeCluster)
+
+[Hadoop Multi Node Cluster](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop/04-HadoopMultiNodeCluster)
+
+
+## Reference
+
+[Python+Spark2.0+Hsdoop 機器學習與大數據分析](http://pythonsparkhadoop.blogspot.tw/)

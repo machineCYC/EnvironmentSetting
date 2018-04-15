@@ -90,9 +90,9 @@ sudo gedit /etc/network/interfaces
 
 * 執行完指令會開啟 interfaces 檔案，輸入下圖紅框內容，然後儲存，離開
   * 設定介面卡 1 (上方紅框)
-    * 設定為 "NAT 介面卡"，可以透過 Host 主機連結至外部網路，設定為 eth0，並且設定 dhcp 自動取得 ip 位址
+    * 設定為 "NAT 介面卡"，可以透過 Host 主機連結至外部網路，設定為 enp0s3，並且設定 dhcp 自動取得 ip 位址
   * 設定介面卡 2 (下方紅框)
-    * 設定為 "內部網路介面卡"，用於建立內部網路，內部網路連結虛擬主機(master、data1、data2、data3) 與 Host 主機。設定為 eth1，並且設定 static 指定固定 ip 位址
+    * 設定為 "內部網路介面卡"，用於建立內部網路，內部網路連結虛擬主機(master、data1、data2、data3) 與 Host 主機。設定為 enp0s8，並且設定 static 指定固定 ip 位址
 
 ![](Image/Image9.png)
 

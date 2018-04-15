@@ -173,8 +173,13 @@ sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml
 ifconfig
 ```
 
+* 執行完指令會看到共有兩張介面卡 enp0s3 與 enp0s8，並且內部 ip 是 192.168.56.101
+
 ![](Image/Image16.png)
 
+
+* data 1 虛擬機器關機
+  * 因為要複製 data 1 給 data 2、data 3、master，所以要先關機 
 
 
 ## 複製 data1 伺服器至 data2、data3、master

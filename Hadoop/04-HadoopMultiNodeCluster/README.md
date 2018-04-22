@@ -184,15 +184,151 @@ ifconfig
 
 ## 複製 data1 伺服器至 data2、data3、master
 
+由於之前 data1 已經設定好 Hadoop Multi Node Cluster 共通的部分，所以直接複製 data1 到 data2、data3、master。
+
+* data1 複製到 data2
+
+![](Image/Image17.png)
+
+![](Image/Image18.png)
+
+![](Image/Image19.png)
+
+* 重複上述步驟依序將 data3、master 複製出來。完成如下圖所示。
+
+![](Image/Image20.png)
+
+* 虛擬機器記憶體設定
+  * 設定虛擬機器的記憶體主要是依照 host 實體主機 (PC 或伺服器) 記憶體大小決定:
+    * 實體記憶體是 16G，建議設定為 master:4G、data1:2G、data2:2G、data3:2G
+    * 實體記憶體是 8G，建議設定為 master:2G、data1:1G、data2:1G、data3:1G
+    * 實體記憶體是 4G，建議只使用 Single Node Cluster:2G
+  * 如果設定虛擬機器的總記憶體大於 host 實體主機記憶體大小，可能會造成實體主機當機
+  * 按照下圖將 data1、data2、data3、master 記憶體設定完成
+
+![](Image/Image21.png)
+
 
 ## 設定 data2 伺服器
 
+* 啟動 data2 虛擬機器，如下圖所示
+
+![](Image/Image22.png)
+
+* 設定 data2 固定 IP
+  * 設定 data2 虛擬主機每次開機使用固定 IP:192.168.56.102
+  * 在 data2 終端機，執行下列指令
+  * 修改紅框處為 192.168.56.102，然後儲存、關閉
+
+```
+sudo gedit /etc/network/interfaces
+```
+
+![](Image/Image23.png)
+
+* 編輯 hostname 檔案
+  * 執行下列指令，修改紅框處為 data2，然後儲存、關閉
+
+```
+sudo gedit /etc/hostname
+```
+
+![](Image/Image24.png)
+
+* 重新啟動 data2 虛擬機器，確認網路設定
+  * 重新啟動之後在 data2 終端機輸入如下指令
+
+```
+ifconfig
+```
+
+![](Image/Image25.png)
 
 ## 設定 data3 伺服器
 
+* 啟動 data3 虛擬機器，做法跟 data2 一樣
+
+* 設定 data3 固定 IP
+  * 設定 data3 虛擬主機每次開機使用固定 IP:192.168.56.103
+  * 在 data3 終端機，執行下列指令
+  * 修改內容為 192.168.56.103，然後儲存、關閉
+
+```
+sudo gedit /etc/network/interfaces
+```
+
+* 編輯 hostname 檔案
+  * 執行下列指令，修改內容處為 data3，然後儲存、關閉
+
+```
+sudo gedit /etc/hostname
+```
+
+* 重新啟動 data3 虛擬機器，確認網路設定
+  * 重新啟動之後在 data3 終端機輸入如下指令
+
+```
+ifconfig
+```
 
 ## 設定 master 伺服器
 
+* 啟動 master 虛擬機器，做法跟之前一樣
+
+* 設定 master 固定 IP
+  * 設定 master 虛擬主機每次開機使用固定 IP:192.168.56.103
+  * 在 master 終端機，執行下列指令
+  * 修改內容為 192.168.56.100，然後儲存、關閉
+
+```
+sudo gedit /etc/network/interfaces
+```
+
+* 編輯 hostname 檔案
+  * 執行下列指令，修改內容處為 master，然後儲存、關閉
+
+```
+sudo gedit /etc/hostname
+```
+
+* 設定 hdfs-site.xml
+  * hdfs-site.xml 用於設定 HDFS 分散式檔案系統相關組態設定。因為 master 現在只是單純 NameNode，請移除 DataNode 的 HDFS 設定，並加入 NameNode 的 HDFS 設定。
+  * 輸入如下指令，修改紅框處為 namenode，然後儲存、關閉
+ 
+```
+sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+```
+
+![](Image/Image26.png)
+
+* 編輯 masters 檔案
+  * masters 檔案主要是告訴 hdoop 系統那一台伺服器是 NameNode
+  * 輸入如下指令，修改紅框處為 master，然後儲存、關閉
+
+```
+sudo gedit /usr/local/hadoop/etc/hadoop/masters
+```  
+
+![](Image/Image27.png)
+
+* 編輯 slaves 檔案
+  * slaves 檔案主要是告訴 hadoop 系統那些伺服器是 DataNode
+  *  輸入如下指令，新增紅框處內容，然後儲存、關閉
+
+```
+sudo gedit /usr/local/hadoop/etc/hadoop/slaves
+```  
+
+![](Image/Image28.png)
+
+* 重新啟動 master 虛擬機器，確認網路設定
+  * 重新啟動之後在 master 終端機輸入如下指令
+
+```
+ifconfig
+```
+
+![](Image/Image29.png)
 
 ## master 連線至 data1、data2、data3 建立 HDFS 目錄
 

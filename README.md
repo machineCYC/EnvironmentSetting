@@ -9,3 +9,5 @@ This repository contains some install file of tools for data analysis, machine l
 [MySQL](https://github.com/machineCYC/EnvironmentSetting/blob/master/MySQL/MySQL.md)
 
 [Hadoop](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop)
+
+[Splunk](https://github.com/machineCYC/EnvironmentSetting/tree/master/Splunk)

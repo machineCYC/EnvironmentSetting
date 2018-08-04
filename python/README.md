@@ -102,3 +102,23 @@ python hello.py
 ```
 
 最後在終端機上應該會出現 Hello, World!
+
+
+## 重建環境套件
+
+由於在開發 python project 常常會需要用大量的套件，為了之後方便快速重建當初所使用的套件及版本，藉由下列兩個檔案來維護
+
+- requirements.txt : 紀錄 pip freeze 的結果
+- requirements-to-freeze.txt : 紀錄專案所依賴的 top-level dependencies
+
+所以在安裝任何新的套件時都需要將其記錄至 requirements-to-freeze.txt。爾後再還原環境套件時指需要執行下列指令，安裝 top-level 套件
+
+```
+pip3 install -r requirements-to-freeze.txt --upgrade
+```
+
+最後利用下列指令查看並生成這個環境下所安裝的所有套件
+
+```
+pip freeze > requirements.txt
+```

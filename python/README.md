@@ -1,12 +1,104 @@
-# 
+# 安裝 python3 並設定環境
 
-# 安装 pip
-sudo apt-get install python-pip
 
-# 在 Linux 系统中执行如下命令安装：
+## 在 Ubuntu 系統中安裝 python3 並設定環境
 
-$ sudo pip install virtualenv
+在開始之前，需要一台安裝了 Ubuntu(本次範例是在 16.04 版操作) 的作業系統。如果尚未安裝 Ubuntu，可以參考 [Ubuntu系統安裝](https://github.com/machineCYC/EnvironmentSetting/tree/master/Linux)或者是[Virtualbox Ubuntu安裝](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop/02-UbuntuLinux)。
 
-[python環境設定](https://www.howtoing.com/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-16-04-server/)
 
-[VSCode安裝](https://oranwind.org/vs-code-ubuntu-16/)
+### Step 1: 設置 python3
+
+Ubuntu 預裝了 python3 和 python2。為了確保版本是最新的，所以先更新和升級系統 apt-get
+
+```
+sudo apt-get update
+sudo apt-get -y upgrade
+```
+
+該 -y 標誌將確認我們同意才能進行安裝的所有項目，但根據安裝的 Ubuntu 版本，可能需要確認額外的提示進行系統更新和升級。一旦過程完成，我們可以通過鍵入以下內容檢查系統中安裝的 Python3 的版本：
+
+```
+python3 -V
+```
+
+要管理 Python 套件，先安裝PIP:
+
+```
+sudo apt-get install -y python3-pip
+```
+
+另外有一些開發工具要先安裝，以確保環境的設置:
+
+```
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+```
+
+- [build-essential](https://packages.ubuntu.com/xenial/build-essential) 主要是為了編譯 C/C++
+- [libssl-dev](https://packages.ubuntu.com/zh-tw/trusty/libssl-dev) 是 OpenSSL 通用库，主要跟傳輸資料有關
+- [libffi-dev](https://packages.ubuntu.com/trusty/libffi-dev) 不同語言之間調用的編譯器
+- [python-dev](https://packages.ubuntu.com/zh-tw/trusty/python-dev) 包含的則是用來以其它語言開發延伸模組用的部分
+
+
+一旦 Python 設置完成，並安裝了 pip 和其他工具，我們可以為我們的開發項目設置一個虛擬環境。
+
+### Step 2: 設置虛擬環境
+
+虛擬環境能夠在服務器上為 Python project 提供獨立的空間，確保每個 project 都有自己的一組依賴性，不會中斷任何其他 project。設置編程環境使我們能夠更好地控制我們的 Python project 以及如何處理不同版本的包。這在使用第三方軟件包時尤其重要。您可以根據需要設置盡可能多的 Python 編程環境。每個環境基本上是一個目錄或文件夾在你的服務器上有幾個腳本，使其作為一個環境。我們需要先安裝 venv 模塊，標準 Python3 庫的一部分，這樣我們就可以調用 pyvenv 命令，它為我們創造的虛擬環境。讓我們通過鍵入以下命令安裝 venv：
+
+```
+sudo apt-get install -y python3-venv
+```
+
+接著準備創建環境。選擇一個資料夾設為 Python 的編程環境，或者我們可以創建一個新的資料夾 mkdir:
+
+```
+mkdir environments
+```
+
+在環境所在的資料夾中，您可以通過運行以下命令來創建環境
+
+```
+pyvenv my_env
+```
+
+pyvenv 建立一個包含 bin include lib lib64 pyvenv.cfg share 檔案的資料夾，利用下列指令來查看
+
+```
+ls my_env
+```
+
+當要在剛建立的環境下做開發時，利用下列指令啟動
+
+```
+source my_env/bin/activate
+```
+
+如果要關閉這開發環境則利用下列指令，就會回到原來的資料夾(environments)
+
+```
+deactivate
+```
+
+
+
+### Step 3: 測試虛擬環境
+
+創建一個簡單的“Hello，World！”程式。這將確保我們的開發環境。打開一個命令行文本編輯器，如 nano，並創建一個新文件
+
+```
+nano hello.py
+```
+
+一旦文本文件在終端窗口中打開，輸入程式
+
+```
+print("Hello, World!")
+```
+
+通過 control 和 x 鍵，並在提示保存文件時，按y 。一旦你退出 nano 並返回你的shell，則運行程序：
+
+```
+python hello.py
+```
+
+最後在終端機上應該會出現 Hello, World!

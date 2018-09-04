@@ -32,6 +32,9 @@ $ cat xxx.py > yyy.py            將 xxx.py 文件內容放到 yyy.py (會覆蓋
 $ cat xxx.py yyy.py > zzz.py     將 xxx.py yyy.py 文件內容放到 zzz.py 通常是用在資料合併
 $ cat xxx >> zzz.py              將 xxx.py 文件內容放到 yyy.py 文件末尾
 
+# 壓縮相關指令
+https://blog.gtwang.org/linux/tar-command-examples-in-linux-1/
+
 $ clear 清空頻幕
 
 $ chmod [誰][如何修改][文件名]

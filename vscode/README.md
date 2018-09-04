@@ -7,6 +7,10 @@ Jupyter
 ESLint
 
 
-讀取自己的模塊，增加模塊路徑
-import sys
-sys.path.append("D:\MainTechPython\MainTech")
+# 安装 pip
+
+sudo apt-get install python-pip
+
+$ sudo pip install virtualenv
+
+[Ubuntu 安裝 vscode](https://oranwind.org/vs-code-ubuntu-16/)

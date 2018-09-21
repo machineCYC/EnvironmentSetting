@@ -4,7 +4,7 @@
 
 - Windows 8 x64
 - Intel CPU i5-5200U
-- NVIDIA GeForce 930M
+- NVIDIA GeForce 930M 2G
 - 記憶體 DDR3 8GB
 
 ## TensorFlow GPU 版本說明
@@ -74,3 +74,21 @@ print(sess.run(c))
 ```
 
 ![](Image/Image6.png)
+
+
+
+## 使用環境
+
+- Ubuntu 18.04 LTS
+- Intel 
+- NVIDIA GeForce 1050 2G
+- 記憶體 DDR3 16GB
+
+
+## Reference
+
+* [GPU driver](https://askubuntu.com/questions/1045241/ubuntu-18-04-how-do-i-install-drivers-for-my-nvidia-geforce-gtx-1050)
+
+* [Ubuntu 18.04 + CUDA 9.0 + cuDNN + Tensorflow测试](https://blog.csdn.net/weixin_38056657/article/details/80948758)
+
+* [CUDA 9.0 相關文件](https://2formosa.blogspot.com/2017/07/debian8.8-cuda8.0-installation.html)

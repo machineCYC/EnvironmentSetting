@@ -43,10 +43,10 @@ sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 
 ### Step 2: 設置虛擬環境
 
-虛擬環境能夠在服務器上為 Python project 提供獨立的空間，確保每個 project 都有自己的一組依賴性，不會中斷任何其他 project。設置編程環境使我們能夠更好地控制我們的 Python project 以及如何處理不同版本的包。這在使用第三方軟件包時尤其重要。您可以根據需要設置盡可能多的 Python 編程環境。每個環境基本上是一個目錄或文件夾在你的服務器上有幾個腳本，使其作為一個環境。我們需要先安裝 venv 模塊，標準 Python3 庫的一部分，這樣我們就可以調用 pyvenv 命令，它為我們創造的虛擬環境。讓我們通過鍵入以下命令安裝 venv：
+虛擬環境能夠在服務器上為 Python project 提供獨立的空間，確保每個 project 都有自己的一組依賴性，不會中斷任何其他 project。設置編程環境使我們能夠更好地控制我們的 Python project 以及如何處理不同版本的包。這在使用第三方軟件包時尤其重要。您可以根據需要設置盡可能多的 Python 編程環境。每個環境基本上是一個目錄或文件夾在你的服務器上有幾個腳本，使其作為一個環境。我們需要先安裝 virtualenv。讓我們通過鍵入以下命令安裝 virtualenv:
 
 ```
-sudo apt-get install -y python3-venv
+sudo apt-get install python-virtualenv
 ```
 
 接著準備創建環境。選擇一個資料夾設為 Python 的編程環境，或者我們可以創建一個新的資料夾 mkdir:
@@ -58,10 +58,10 @@ mkdir environments
 在環境所在的資料夾中，您可以通過運行以下命令來創建環境
 
 ```
-pyvenv my_env
+virtualenv --python=python3.6 --no-site-packages my_env 
 ```
 
-pyvenv 建立一個包含 bin include lib lib64 pyvenv.cfg share 檔案的資料夾，利用下列指令來查看
+virtualenv 建立一個包含 bin include lib lib64 pyvenv.cfg share 檔案的資料夾，利用下列指令來查看
 
 ```
 ls my_env
@@ -114,7 +114,7 @@ python hello.py
 所以在安裝任何新的套件時都需要將其記錄至 requirements-to-freeze.txt。爾後再還原環境套件時指需要執行下列指令，安裝 top-level 套件
 
 ```
-pip3 install -r requirements-to-freeze.txt --upgrade
+pip3 install -r requirements-to-freeze.txt
 ```
 
 最後利用下列指令查看並生成這個環境下所安裝的所有套件
@@ -122,3 +122,9 @@ pip3 install -r requirements-to-freeze.txt --upgrade
 ```
 pip freeze > requirements.txt
 ```
+
+## Reference
+
+* [Add PYTHONPATH](https://blog.csdn.net/u011440558/article/details/78611829)
+
+* [virtualenv 虛擬環境](https://blog.csdn.net/White_Idiot/article/details/78240782)

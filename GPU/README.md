@@ -76,6 +76,8 @@ print(sess.run(c))
 ![](Image/Image6.png)
 
 
+Note:
+1. Ubuntu 18.04 更換 GPU 需先將 driver 移除，升級 gcc & g++ 到 7.3(最新版本)，再重新安裝新 GPU 的 driver
 
 ## 使用環境
 

@@ -127,6 +127,8 @@ pip freeze > requirements.txt
 
 * [Add PYTHONPATH](https://blog.csdn.net/u011440558/article/details/78611829)
 
-* [virtualenv 虛擬環境](https://blog.csdn.net/White_Idiot/article/details/78240782)
+* [virtualenv 虛擬環境(mac or linux)](https://blog.csdn.net/White_Idiot/article/details/78240782)
+
+* [virtualenv 虛擬環境(windows)](https://blog.csdn.net/liuchunming033/article/details/46008301)
 
 * [venv 虛擬環境](https://openhome.cc/Gossip/CodeData/PythonTutorial/PipPyvenvPy3.html)

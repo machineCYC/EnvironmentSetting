@@ -2,10 +2,12 @@
 
 ## 使用環境
 
-- Windows 8 x64
-- Intel CPU i5-5200U
-- NVIDIA GeForce 930M 2G
-- 記憶體 DDR3 8GB
+| os | nvidia-driver | cuda | cudnn | GPU | tensotflow | tensotflow-gpu |
+| --- | --- | --- | --- |--- |--- |--- |
+| windows 8.1 (64) | 376.51 | 8.0 | 6.0 | GeForce 930M(2G) | 1.4.0 | 1.4.0 |
+| ubuntu 18.04 (64) | 390 | 9.0 | 6.0 | GeForce 1050(2G) | 1.7.0 | 1.7.0 |
+| ubuntu 18.04 (64) | 390 | 9.0 | 6.0 | GeForce 1060(6G) | 1.7.0 | 1.7.0 |
+
 
 ## TensorFlow GPU 版本說明
 
@@ -78,13 +80,6 @@ print(sess.run(c))
 
 Note:
 1. Ubuntu 18.04 更換 GPU 需先將 driver 移除，升級 gcc & g++ 到 7.3(最新版本)，再重新安裝新 GPU 的 driver
-
-## 使用環境
-
-- Ubuntu 18.04 LTS
-- Intel 
-- NVIDIA GeForce 1050 2G
-- 記憶體 DDR3 16GB
 
 
 ## Reference

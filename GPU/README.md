@@ -5,6 +5,7 @@
 | os | nvidia-driver | cuda | cudnn | GPU | tensotflow | tensotflow-gpu |
 | --- | --- | --- | --- |--- |--- |--- |
 | windows 8.1 (64) | 376.51 | 8.0 | 6.0 | GeForce 930M(2G) | 1.4.0 | 1.4.0 |
+| windows 8.1 (64) | 385.54 | 9.0 | 7.0 | GeForce 930M(2G) | 1.11.0 | 1.11.0 |
 | ubuntu 18.04 (64) | 390 | 9.0 | 6.0 | GeForce 1050(2G) | 1.7.0 | 1.7.0 |
 | ubuntu 18.04 (64) | 390 | 9.0 | 6.0 | GeForce 1060(6G) | 1.7.0 | 1.7.0 |
 
@@ -26,7 +27,7 @@ TensorFlow 要利用 GPU 強大的平行運算功能，必須安裝TensorFlow GP
 
 ## 安装 NVIDIA CUDA Toolkit 和 cuDNN
 
-- [CUDA](https://developer.nvidia.com/cuda-80-ga2-download-archive):是由NVIDIA所推出的整合技術，統一計算架構CUDA（Compute Unified Device Architecture），CUDA 是 NVIDIA 的平行運算架構，可運用繪圖處理單元(GPU) 的強大處理能力，大幅增加運算效能。Nvidia 已售出數百萬顆 CUDA GPU，程式設計師、科學家等，將 CUDA 應用於各種領域，如影像處理、視訊處理、醫學診斷..等等。
+- [CUDA](https://developer.nvidia.com/cuda-toolkit-archive):是由NVIDIA所推出的整合技術，統一計算架構CUDA（Compute Unified Device Architecture），CUDA 是 NVIDIA 的平行運算架構，可運用繪圖處理單元(GPU) 的強大處理能力，大幅增加運算效能。Nvidia 已售出數百萬顆 CUDA GPU，程式設計師、科學家等，將 CUDA 應用於各種領域，如影像處理、視訊處理、醫學診斷..等等。
 
 ![](Image/Image1.png) 
 
@@ -34,7 +35,7 @@ TensorFlow 要利用 GPU 強大的平行運算功能，必須安裝TensorFlow GP
 
 ![](Image/Image3.png) 
 
-- [cuDNN](): (CUDA Deep Neural Network library)是 NVIDIA 深度學習 SDK 的一部分，是 GPU 的深度學習程式庫。cuDNN 能為深度學習，提供高效能神經網絡層級，例如:卷積、池化和激活層..等等。
+- [cuDNN](https://developer.nvidia.com/rdp/cudnn-download): (CUDA Deep Neural Network library)是 NVIDIA 深度學習 SDK 的一部分，是 GPU 的深度學習程式庫。cuDNN 能為深度學習，提供高效能神經網絡層級，例如:卷積、池化和激活層..等等。
 
 ![](Image/Image2.png) 
 
@@ -79,13 +80,22 @@ print(sess.run(c))
 
 
 Note:
-1. Ubuntu 18.04 更換 GPU 需先將 driver 移除，升級 gcc & g++ 到 7.3(最新版本)，再重新安裝新 GPU 的 driver
+
+1. Windows 不需要先安裝 gpu dirver。直接安裝 cuda 就會一起安裝
+
+2. Ubuntu 18.04 更換 GPU 需先將 driver 移除，升級 gcc & g++ 到 7.3(最新版本)，再重新安裝新 GPU 的 driver
+
+3. cuDnn 需要先登入才能下載
 
 
 ## Reference
 
-* [GPU driver](https://askubuntu.com/questions/1045241/ubuntu-18-04-how-do-i-install-drivers-for-my-nvidia-geforce-gtx-1050)
+* [Windows GPU dirver update](http://ofeyhong.pixnet.net/blog/post/212050369-%E3%80%90%E6%95%99%E5%AD%B8%E3%80%91%E6%9B%B4%E6%96%B0%E9%A1%AF%E7%A4%BA%E5%8D%A1%E9%A9%85%E5%8B%95%E7%A8%8B%E5%BC%8F)
+
+* [Windows cuda9.0](https://www.deciphertechnic.com/fix-cuda-toolkit-installation/)
+
+* [Ubuntu GPU driver](https://askubuntu.com/questions/1045241/ubuntu-18-04-how-do-i-install-drivers-for-my-nvidia-geforce-gtx-1050)
 
 * [Ubuntu 18.04 + CUDA 9.0 + cuDNN + Tensorflow测试](https://blog.csdn.net/weixin_38056657/article/details/80948758)
 
-* [CUDA 9.0 相關文件](https://2formosa.blogspot.com/2017/07/debian8.8-cuda8.0-installation.html)
+* [Ubuntu install CUDA 9.0 相關文件](https://2formosa.blogspot.com/2017/07/debian8.8-cuda8.0-installation.html)

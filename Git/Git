@@ -18,6 +18,21 @@ $ cd /d/git/2017MLSpring_Hung-yi-Lee
 $ cd /d/git/Coursera
 $ cd /d/git/SideProjects
 
+開新分支
+git branch branch_name
+
+切換分支
+git checkout branch_name
+
+建立 local 分支且 push 上 remote
+git checkout -t -b local_branch_name origin local_branch_name
+
+push 上 remote 這分之，不存在則 remote 端會建立
+git push origin local_branch_name
+
+與 remote 同步
+git remote update
+
 增加檔案
 $ git add 檔案名稱.py
 

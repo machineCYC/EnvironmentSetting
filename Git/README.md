@@ -11,3 +11,6 @@ sudo apt-get update
 ```
 sudo apt-get install git
 ```
+
+
+## 多個帳號同時使用

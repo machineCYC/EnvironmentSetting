@@ -1,10 +1,12 @@
 # vscode 擴充功能
 
-MagicPython
-Python
-TODO Highlight
-Jupyter
-ESLint
+- MagicPython
+- Python
+- TODO Highlight
+- Jupyter
+- ESLint
+- GitLens
+- vscode-pdf
 
 
 # 安装 pip

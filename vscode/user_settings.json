@@ -2,7 +2,7 @@
     "files.exclude":{
         "**/.git": true,
         "**/.idea": true,
-        "**/.vscode": true,
+        "**/.vscode": false,
         "**/.__pycache__": true,
         "**/.svn": true,
         "**/.hg": true,
@@ -13,6 +13,8 @@
     // 顯示空白字元
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
+    // 儲存時，自動過濾多餘空格
+    "files.trimTrailingWhitespace": true,
     // 控制字型大小 (以像素為單位)。
     "editor.fontSize": 12,
     // 控制是否自動換行。可以是:
@@ -22,10 +24,12 @@
     //  - 'bounded' (當檢視區縮至最小並設定 'editor.wordWrapColumn' 時換行).
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
-    "python.pythonPath": "D:/python/python.exe",
-    "jupyter.appendResults": true,
+    "git.ignoreLimitWarning": true,
+    "jupyter.appendResults": false,
     "files.associations": {
         "*.py": "python"
     },
-    "workbench.panel.location": "bottom"
+    "workbench.panel.location": "bottom",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Default High Contrast"
 }

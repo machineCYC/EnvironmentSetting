@@ -7,6 +7,9 @@
 - ESLint
 - GitLens
 - vscode-pdf
+- Mithril Emmet: 前端語法快捷
+- Live Server: 網頁即時顯示
+
 
 
 # 安装 pip

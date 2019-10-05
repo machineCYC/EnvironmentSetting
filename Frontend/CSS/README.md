@@ -4,7 +4,7 @@
 
 - 後面程式會覆蓋前面程式 style
 
-- Responsive Web Design 簡稱 RWD，又稱適應性網頁、響應式網頁設計、回應式網頁設計、多螢網頁設計
+- Responsive Web Design 簡稱 RWD，又稱適應性網頁、響應式網頁設計、回應式網頁設計、多螢網頁設計，一站解決多種裝置顯示問題
 
 ## 使用方法
 

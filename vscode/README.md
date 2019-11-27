@@ -19,3 +19,7 @@ sudo apt-get install python-pip
 $ sudo pip install virtualenv
 
 [Ubuntu 安裝 vscode](https://oranwind.org/vs-code-ubuntu-16/)
+
+# workspace setting
+
+- [Open multiple Projects/Folders in Visual Studio Code](https://stackoverflow.com/questions/30234146/open-multiple-projects-folders-in-visual-studio-code)

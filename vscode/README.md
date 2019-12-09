@@ -10,7 +10,7 @@
 - Mithril Emmet: 前端語法快捷
 - Live Server: 網頁即時顯示
 - Beautify: 前端程式排版
-
+- Python Test Explorer for Visual Studio Code: vsocde 執行測試
 
 # 安装 pip
 

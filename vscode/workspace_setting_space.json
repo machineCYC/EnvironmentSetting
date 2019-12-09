@@ -1,4 +1,8 @@
 {
     "python.pythonPath": "env\\Scripts\\python.exe",
-    "python.terminal.activateEnvironment": true
+    "python.terminal.activateEnvironment": true,
+
+    // 使用 pytest, 不使用 unittest
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false
 }

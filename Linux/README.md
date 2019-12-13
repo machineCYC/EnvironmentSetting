@@ -101,3 +101,7 @@ Linux distribution 下有分很多種 UI，比如:
 ## VirtualBox 5.2 安裝 Ubuntu 16.04 與 Windows 8 共用資料夾
 
 http://blog.xuite.net/yh96301/blog/76237032-VirtualBox+5.2%E5%AE%89%E8%A3%9DUbuntu+16.04%E8%88%87Windows+10%E5%85%B1%E7%94%A8%E8%B3%87%E6%96%99%E5%A4%BE
+
+## Ubuntu 18.04 link OneDrive
+
+- [OneDrive](https://www.maketecheasier.com/sync-onedrive-linux/)

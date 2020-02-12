@@ -1,4 +1,12 @@
-# 安裝 Ubuntu 16.04.3 LTS
+# 安裝 Ubuntu System
+
+## Windows Subsystem for Linux (WSL)
+
+在 windows 10 之後可以在 window 上建立 subsystem，尤其是 linux 系統，更方便 dev 開發
+
+### [介紹好用工具：WSL (Windows Subsystem for Linux)](https://blog.miniasp.com/post/2019/02/01/Useful-tool-WSL-Windows-Subsystem-for-Linux)
+
+## 安裝 Ubuntu 16.04.3 LTS
 
 Linux distribution 下有分很多種 UI，比如:
 
@@ -10,7 +18,7 @@ Linux distribution 下有分很多種 UI，比如:
 
 在這我們挑選一個比較被廣泛使用的 Ubuntu 來安裝。
 
-## Download Ubuntu
+### Download Ubuntu
 
 一般來說 Linux 都會選擇英文版的來安裝，如果特別喜歡中文版的，可以在 google 尋找。下面是 Ubuntu 英文版本的載點。
 
@@ -20,7 +28,7 @@ Linux distribution 下有分很多種 UI，比如:
 
 下载好以後 (大概1.5GB), 會有一個文件名稱類似 ubuntu-16.04.3-desktop-amd64.iso ，這就是 Ubuntu 的桌面版安装文件。接著我们將這文件放進事先準備好的 USB 或外接硬碟。
 
-## 使用 USB 安装 Ubuntu
+### 使用 USB 安装 Ubuntu
 
 因為大部分使用者都是 Windows 轉 Ubuntu, 所以下面的解說都是基於 Windows，另外想要看更仔細的說明可以參考 [官方版 Ubuntu USB 安装說明](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows?_ga=2.242174530.1746861324.1507700161-1586045268.1507700161#0)。
 
@@ -98,7 +106,7 @@ Linux distribution 下有分很多種 UI，比如:
 
 ![](Image/Image15.png)
 
-## VirtualBox 5.2 安裝 Ubuntu 16.04 與 Windows 8 共用資料夾
+### VirtualBox 5.2 安裝 Ubuntu 16.04 與 Windows 8 共用資料夾
 
 http://blog.xuite.net/yh96301/blog/76237032-VirtualBox+5.2%E5%AE%89%E8%A3%9DUbuntu+16.04%E8%88%87Windows+10%E5%85%B1%E7%94%A8%E8%B3%87%E6%96%99%E5%A4%BE
 

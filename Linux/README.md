@@ -113,3 +113,9 @@ http://blog.xuite.net/yh96301/blog/76237032-VirtualBox+5.2%E5%AE%89%E8%A3%9DUbun
 ## Ubuntu 18.04 link OneDrive
 
 - [OneDrive](https://www.maketecheasier.com/sync-onedrive-linux/)
+
+## 常用 Tool
+
+- [WSL 設定 Z shell (zsh)](https://poychang.github.io/note-windows-terminal/)
+    - 由於 wsl 主題選 會有些符號無法顯示(windows 自型比較少，多裝(要安裝在windows上，不是WSL) Powerline 就可以)，所以我選擇安裝bira，比較方便
+    - 之後要修改就改 ~/.zshrc 檔案

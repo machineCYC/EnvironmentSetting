@@ -19,7 +19,6 @@
 
 ## Reference
 
-![Ubuntu inatall](https://blog.gtwang.org/virtualization/docker-basic-tutorial/)
+- [Ubuntu inatall](https://blog.gtwang.org/virtualization/docker-basic-tutorial/)
 
-
-https://github.com/twtrubiks/docker-tutorial
+- [docker-tutorial](https://github.com/twtrubiks/docker-tutorial)

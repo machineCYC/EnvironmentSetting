@@ -4,19 +4,10 @@
 
 在 windows 10 之後可以在 window 上建立 subsystem，尤其是 linux 系統，更方便 dev 開發
 
-### [介紹好用工具：WSL (Windows Subsystem for Linux)](https://blog.miniasp.com/post/2019/02/01/Useful-tool-WSL-Windows-Subsystem-for-Linux)
+- [介紹好用工具：WSL (Windows Subsystem for Linux)](https://blog.miniasp.com/post/2019/02/01/Useful-tool-WSL-Windows-Subsystem-for-Linux)
+
 
 ## 安裝 Ubuntu 16.04.3 LTS
-
-Linux distribution 下有分很多種 UI，比如:
-
-- CentOS
-- Debian
-- Mint
-- Ubuntu
-- 等等
-
-在這我們挑選一個比較被廣泛使用的 Ubuntu 來安裝。
 
 ### Download Ubuntu
 

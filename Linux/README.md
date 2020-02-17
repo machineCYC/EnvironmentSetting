@@ -1,8 +1,18 @@
 # Linux
 
+Linux distribution 下有分很多種 UI，比如:
+
+- CentOS
+- Debian
+- Mint
+- Ubuntu
+- 等等
+
+在這我們挑選一個比較被廣泛使用的 Ubuntu 來安裝。
+
 ## Install 
 
-- 參考 [Install.md](/NSTALL.md)
+- 參考 [Install.md](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux/INSTALL.md)
 
 ## Ubuntu 18.04 link OneDrive
 
@@ -17,3 +27,7 @@
     - 切換 bash 和 zsh 
         - Switch to bash: exec bash
         - Switch to zsh: exec zsh
+
+- Linux 常常會有 GUI 介面無法展示的問題, ex: gitk, matplotlib plt.show ...
+    - windows subsystem linux, 參考如下解法
+        - [Show matplotlib plots in Ubuntu (Windows subsystem for Linux)](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux/INSTALL.md)

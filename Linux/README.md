@@ -24,9 +24,13 @@ Linux distribution 下有分很多種 UI，比如:
     - 由於 windows 會有些符號無法顯示zsh部分字型或圖案(windows 字型比較少，在 windows 多安裝 Powerline 就可以)，所以我選擇主題 bira，比較方便
     - 之後主體要修改就改 ~/.zshrc 檔案
     - 如果有使用 zsh 要小心, 原本新增 PATH 到 bashrc 也要新增到 zshrc, 不然 terminal 會讀不到 (ex: pyenv, pipenv)
-    - 切換 bash 和 zsh 
-        - Switch to bash: exec bash
-        - Switch to zsh: exec zsh
+    - 切換 bash 和 zsh
+        - 當下 terminal 
+            - Switch to bash: exec bash
+            - Switch to zsh: exec zsh
+        - 永久更改
+            - chsh -s /bin/bash
+            - chsh -s /bin/zsh
 
 - Linux 常常會有 GUI 介面無法展示的問題, ex: gitk, matplotlib plt.show ...
     - windows subsystem linux, 參考如下解法

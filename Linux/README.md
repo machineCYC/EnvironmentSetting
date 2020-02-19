@@ -37,5 +37,8 @@ Linux distribution 下有分很多種 UI，比如:
         - [Show matplotlib plots in Ubuntu (Windows subsystem for Linux)](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux/INSTALL.md)
 
 - Terminal 顯示 branch name
-    - 在.bashrc 新增 **PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '**
+    - 在.bashrc 新增如下
+    ```
+    export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+    ```
     - 更多樣式更多樣式 [參考link](https://gist.github.com/justintv/168835)

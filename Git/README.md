@@ -12,6 +12,19 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
+## 設定 ssh key
+
+產生  ssh key 指令如下:
+```
+ssh-keygen
+```
+
+複製 id_rsa.pub 的內容到 github or gitlab...等
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+到 github or gitlab 設定頁面將剛剛複製的金鑰輸入進去
 
 ## 多個帳號同時使用
 

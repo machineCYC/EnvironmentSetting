@@ -1,5 +1,8 @@
 # Install Docker
 
+## Linux
+
+
 ## Windows Subsystem (WSL)
 
 - 手動開啟 windows Hyper-V
@@ -48,4 +51,5 @@
 
 - 電腦無法裝
 
+    - Windows: Docker Desktop requires Windows 10 Pro or Enterprise version 14393 to run
     - 本次 docker 安裝是在 windows8 環境下操作，不滿足基本環境需求

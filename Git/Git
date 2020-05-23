@@ -33,6 +33,9 @@ git push origin local_branch_name
 與 remote 同步
 git remote update
 
+修改或合併 commit (但之後 local branch 會跟 remote 不一樣，所有 push 記得要加 -f) 
+git rebase -i commit_id
+
 增加檔案
 $ git add 檔案名稱.py
 

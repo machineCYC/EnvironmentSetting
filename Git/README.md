@@ -36,3 +36,11 @@ cat ~/.ssh/id_rsa.pub
 - 設定各 Repository 的 User 資料
   - $git config  user.email "userName@address"     
   - $git config  user.name "userName"
+
+  ## 設定 submodule
+
+  開發新專案有時候需要使用到其他專案的程式，可以透過 git submodule 來達到此目的，並可以隨時同步最新的程式碼
+
+```
+git submodule add <remote 路徑>
+```

@@ -2,15 +2,17 @@
 
 - MagicPython
 - Python
-- TODO Highlight
+- Python Test Explorer for Visual Studio Code: vsocde 執行測試
 - Jupyter
 - ESLint
+- Importmagic: 排版 import 部分程式
+- TODO Highlight
 - GitLens
+- Git Graph
 - vscode-pdf
 - Mithril Emmet: 前端語法快捷
 - Live Server: 網頁即時顯示
 - Beautify: 前端程式排版
-- Python Test Explorer for Visual Studio Code: vsocde 執行測試
 
 # 安装 pip
 

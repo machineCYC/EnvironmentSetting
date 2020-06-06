@@ -44,3 +44,23 @@ cat ~/.ssh/id_rsa.pub
 ```
 git submodule add <remote 路徑>
 ```
+
+## Pull Request SOP
+
+- 複製（Fork）專案到自己的 gtihub
+- Clone fork 過來的 repository 到 local
+- 修改完推回自己 github 
+- create pull request 給原來作者
+
+- 同步原作者的 code
+  - 設定原作者遠端連結
+    - git remote add **設定原作者遠端節點名稱** **原作者 github link**
+        - Ex: git remote add dmlc-xgboost https://github.com/dmlc/xgboost.git
+    - 查看遠端節點設定是否成功: git remote -v
+  - 抓取源專案內容 
+    - git fetch **設定原作者遠端節點名稱**
+        - Ex: git fetch dmlc-xgboost
+    - git merge **設定原作者遠端節點名稱**/master
+        - Ex: git merge dmlc-xgboost/master
+  - 推回自己專案
+    - git push origin master

@@ -4,11 +4,11 @@
 
 | os | nvidia-driver | cuda | cudnn | GPU | tensotflow | tensotflow-gpu |
 | --- | --- | --- | --- |--- |--- |--- |
-| windows 8.1 (64) | 376.51 | 8.0 | 6.0 | GeForce 930M(2G) | 1.4.0 | 1.4.0 |
-| windows 8.1 (64) | 385.54 | 9.0 | 7.0 | GeForce 930M(2G) | 1.11.0 | 1.11.0 |
-| ubuntu 18.04 (64) | 390.48 | 9.0 | 7.0 | GeForce 1050(2G) | 1.10.0 | 1.10.0 |
+| ubuntu 18.04 (64) | 450.36 | 10.1 | 7.6.5 | GeForce 1060(6G) | 2.2.0 | 2.2.0 |
 | ubuntu 18.04 (64) | 390.48 | 9.0 | 7.0 | GeForce 1060(6G) | 1.10.0 | 1.10.0 |
-
+| ubuntu 18.04 (64) | 390.48 | 9.0 | 7.0 | GeForce 1050(2G) | 1.10.0 | 1.10.0 |
+| windows 8.1 (64) | 385.54 | 9.0 | 7.0 | GeForce 930M(2G) | 1.11.0 | 1.11.0 |
+| windows 8.1 (64) | 376.51 | 8.0 | 6.0 | GeForce 930M(2G) | 1.4.0 | 1.4.0 |
 
 ## TensorFlow GPU 版本說明
 
@@ -20,8 +20,8 @@ TensorFlow 要利用 GPU 強大的平行運算功能，必須安裝TensorFlow GP
 
 ## 兼容性問題
 
-- python3.6 + cuda8 + cuDNN6 
-- python3.5 + cuda8 + cuDNN6 
+- python3.6 + cuda8 + cuDNN6
+- python3.5 + cuda8 + cuDNN6
 
 一般在 python3.5 的組合下，需要 Micrsolft Visual C++ 2015 Redistributable，但在 python3.6 需要的是 Micrsolft Visual C++ 2017 Redistributable。本身嘗試了第一個組合是可行的而且過程似乎也比較容易。
 
@@ -29,15 +29,15 @@ TensorFlow 要利用 GPU 強大的平行運算功能，必須安裝TensorFlow GP
 
 - [CUDA](https://developer.nvidia.com/cuda-toolkit-archive):是由NVIDIA所推出的整合技術，統一計算架構CUDA（Compute Unified Device Architecture），CUDA 是 NVIDIA 的平行運算架構，可運用繪圖處理單元(GPU) 的強大處理能力，大幅增加運算效能。Nvidia 已售出數百萬顆 CUDA GPU，程式設計師、科學家等，將 CUDA 應用於各種領域，如影像處理、視訊處理、醫學診斷..等等。
 
-![](Image/Image1.png) 
+![](Image/Image1.png)
 
 - 驗證CUDA安裝成功，在cmd然後輸入“nvcc -V”，如果安裝正確的話你應該看到這樣的輸出：
 
-![](Image/Image3.png) 
+![](Image/Image3.png)
 
 - [cuDNN](https://developer.nvidia.com/rdp/cudnn-download): (CUDA Deep Neural Network library)是 NVIDIA 深度學習 SDK 的一部分，是 GPU 的深度學習程式庫。cuDNN 能為深度學習，提供高效能神經網絡層級，例如:卷積、池化和激活層..等等。
 
-![](Image/Image2.png) 
+![](Image/Image2.png)
 
 - 解壓縮我們下載的 CuDnn 文件，得到3個文件夾：bin, include, lib。
 

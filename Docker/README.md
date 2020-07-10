@@ -21,6 +21,8 @@ docker run: 一般執行 docker 方式，通常只會執行一個 container (一
 
 docker compose: 啟動多個 container，避免很多個應用要一個一個執行 docker run
 
+docker build -t **image_name**:**tag_name** . : 透過 Dockerfile build image, image 名稱為 image_name, tag 為 tag_name
+
 ## Dockerize 應用程式
 
 - 目標: 把程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來
@@ -43,6 +45,14 @@ docker compose: 啟動多個 container，避免很多個應用要一個一個執
         - **COPY** A.py /project/: 把 A.py 複製到 project 裡面
         - **WORKID** /project/: 切換到 project 資料夾下
         - **CMD**
+
+## Docker compose
+
+- Docker Compose 是一個工具可以讓你可以透過一個指令就可以控制所有專案（project）中所需要的 services
+- Docker Compose 是用 YAML 檔案格式來描述和定義 project 中 services 運作關係
+- 指令
+    - docker-compose -f **docker-compose yml file name** up -d: 啟動 docker-compose 上所有 services, 其中 **-d** 代表在背景執行
+	- docker-compose -f **docker-compose yml file** down: 關閉 docker-compose 上所有 services
 
 ## Reference
 

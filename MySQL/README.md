@@ -1,90 +1,24 @@
-# 安裝 MySQL 5.7.21
+# MySQL
+
+## DB schema-設計原則
+
+- 不同的型態存在資料庫的容量大小會不同，因此在設計上需要先估算此張表寫入的資料量大小，再決定使用什麼型態，而不是一昧的使用最大型態。
+- CREATE TABLE 時就應該設定 COLLATE=utf8mb4_unicode_ci(或者是其他編碼)，不需要再針對 column 做 COLLATE 的設定。
+    - 主要原因是當未來 DBA 需要協助調整 COLLATE 設定時，還要再進 column 改一次，會增加調整的成本。
+- 欄位如果非必填，建議都是以預設空字串或 0 為主，盡量不要 DEFAULT NULL。
+    - 原因是 InnoDB 會把需要的空間畫進去 data page (16K) 裡面，但是 Null 只是一個 flag ，當 NULL 被寫入值的時候，需要把整筆記錄搬一個新的位置，會造成 Data fragmentation。
+- 建立索引 (Index)
+    - MySQL 中，索引都是以 B+Tree 的方式儲存，這種結構可以在查詢時針對鍵值快速找出資料。因此，如果 Table 中會被拿來當搜尋依據的特定欄位，都需要加上索引（Index）
+
+### type
+
+- 字串的設計: char 或 varchar
+    - char 通常確定長度，長度不足還是會用空白填滿
+    - varchar 不確定長度
+    - VARCHAR 超過 255 的話, 標識字串長度需要用到 2 bytes
+    - 儲存大小會根據編碼決定，utf8 編碼要 * 3，utf8mb4 要 * 4
 
 
-## Download MySQL
+## Reference
 
-MySQL的官方網站目前提供一個完整的安裝程式，在Windows平台只要下載與安裝一個檔案，就包含資料庫伺服器和所有需要的工具軟體。你可以到這個連結準備開始下載：
-
-- [MySQL官方網站](https://dev.mysql.com/downloads/windows/installer/)
-
-進入這個網站以後，下載紅框的部分，然後參考下面的說明，下載與儲存完整的安裝檔案：
-
-![](Image/Image1.png) 
-
-
-下載完成後，執行安裝程式，在 License Agressment 選擇開始安裝並同意版權聲明後，在 Choosing a Setup Type 的畫面選擇 Developer Default 然後 Next
-
-![](Image/Image2.png) 
-
-在 Check Requirements 的畫面選擇 Next
-
-![](Image/Image3.png) 
-
-在 Installation 的畫面選擇 Execute，就會進入開始安裝的步驟。安裝完成後，選擇 Next
-
-![](Image/Image4.png) 
-
-![](Image/Image5.png) 
-
-在 Product Configuration 的畫面選擇 Next
-
-![](Image/Image6.png) 
-
-之後會依序跳出下列畫面，均選擇 Next
-
-![](Image/Image7.png) 
-
-![](Image/Image8.png) 
-
-在 Accounts and Roles 的畫面設定資料庫管理員(root)密碼的步驟，輸入一個你自己決定的密碼，並新增一位使用者，然後選擇 Next
-
-![](Image/Image9.png) 
-
-![](Image/Image9-1.png) 
-
-MySQL server 預設在電腦開機時開啟。建議就讓他自動開啟，省得麻煩，如果你取消勾選，到時候要自己到服務管理開啟 (services.msc)
-
-![](Image/Image10.png) 
-
-以下均選擇 Next/Execute/Finish，按照紅框指示操作
-
-![](Image/Image11.png) 
-
-![](Image/Image12.png) 
-
-![](Image/Image13.png) 
-
-![](Image/Image14.png) 
-
-![](Image/Image15.png) 
-
-![](Image/Image16.png) 
-
-連接到數據庫
-
-![](Image/Image17.png) 
-
-![](Image/Image18.png) 
-
-![](Image/Image19.png) 
-
-最後是安裝應用配置。完成配置後 MySQL 就安裝完成了
-
-![](Image/Image20.png) 
-
-![](Image/Image21.png) 
-
-安裝成功出現這個，其實這個安裝包括了 MYSQL 的可視化的工具 workbench 部分
-
-MySQL Workbench 是一款專為資料庫架構師、開發人員和 DBA 打造的一個統一的視覺化工具。MySQL Workbench 提供了資料建模工具、SQL 開發工具和全面的管理工具(包括伺服器配置、使用者管理、備份等)，可在 Windows、Linux 和 Mac OS 上使用
-
-![](Image/Image22.png)
-
-新建一個數據庫連接
-
-![](Image/Image23.png)
-
-數據庫測試成功
-
-![](Image/Image24.png)
-
+- [mysql-db-schema-設計原則](https://blog.johnsonlu.org/mysql-db-schema-%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87/)

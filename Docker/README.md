@@ -23,6 +23,18 @@ docker compose: 啟動多個 container，避免很多個應用要一個一個執
 
 docker build -t **image_name**:**tag_name** . : 透過 Dockerfile build image, image 名稱為 image_name, tag 為 tag_name
 
+docker build -f **docker_file_name** -t **image_name**:**image_tag** . : 指定 docker_file_name build image, image 名稱為 image_name, tag 為 tag_name
+
+docker run -it --rm **image_name**: 進到 docker container 裡面, **--rm** 離開時順便關閉
+
+docker log XXXX: 查看 XXX log
+
+docker rm **container_id**: 刪除 container
+
+docker rmi **image_id**: 刪除 image
+
+docker exec -it **image_name** bash: 進到 **image_name** 的 bash
+
 ## Dockerize 應用程式
 
 - 目標: 把程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來
@@ -54,6 +66,17 @@ docker build -t **image_name**:**tag_name** . : 透過 Dockerfile build image, i
     - docker-compose -f **docker-compose yml file name** up -d: 啟動 docker-compose 上所有 services, 其中 **-d** 代表在背景執行
 	- docker-compose -f **docker-compose yml file** down: 關閉 docker-compose 上所有 services
 
+
+## Swarn
+
+- portainer
+
+- docker swarm init: swarm 初始化
+
+- docker stack deploy -c docker-stack.yml portainer
+
+- docker swarm leave --force : 結束 swarm
+
 ## Reference
 
 - [Ubuntu inatall](https://blog.gtwang.org/virtualization/docker-basic-tutorial/)
@@ -61,3 +84,5 @@ docker build -t **image_name**:**tag_name** . : 透過 Dockerfile build image, i
 - [docker-tutorial](https://github.com/twtrubiks/docker-tutorial)
 
 - [dockerize application](https://larrylu.blog/step-by-step-dockerize-your-app-ecd8940696f4)
+
+- [Docker 中刪除 Images 鏡像 及 Containers](https://www.opencli.com/linux/docker-delete-images-containers)

@@ -19,13 +19,13 @@ docker run -it ubuntu bash: 把 ubuntu 的 image 跑起來變成 container，-it
 
 docker run: 一般執行 docker 方式，通常只會執行一個 container (一個應用)
 
+docker run -it --rm **image_name**: 進到 docker container 裡面, **--rm** 離開時順便關閉
+
 docker compose: 啟動多個 container，避免很多個應用要一個一個執行 docker run
 
 docker build -t **image_name**:**tag_name** . : 透過 Dockerfile build image, image 名稱為 image_name, tag 為 tag_name
 
 docker build -f **docker_file_name** -t **image_name**:**image_tag** . : 指定 docker_file_name build image, image 名稱為 image_name, tag 為 tag_name
-
-docker run -it --rm **image_name**: 進到 docker container 裡面, **--rm** 離開時順便關閉
 
 docker log XXXX: 查看 XXX log
 

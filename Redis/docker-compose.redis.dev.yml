@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  redis-backend:
+    image: 'bitnami/redis:5.0'
+    environment:
+      - REDIS_PASSWORD=123456789
+    ports:
+      - "6379:6379"
+    hostname: redis
+    volumes:
+      - 'redis_test_data:/bitnami/redis/data'
+    restart: always
+
+volumes:
+  redis_test_data:

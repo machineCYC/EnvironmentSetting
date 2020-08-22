@@ -4,6 +4,13 @@ Redis 是一個高效能的 key-value 資料庫
 
 ### 連線
 
+透過 docker run  redis server
+
+- up: docker-compose -f docker-compose.redis.yml up -d
+- down: docker-compose -f docker-compose.redis.yml down
+
+利用 python 跟 redis 連線
+
 ```
 import redis
 rs = redis.StrictRedis(

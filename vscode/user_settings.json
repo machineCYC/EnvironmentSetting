@@ -1,5 +1,5 @@
 {
-    "files.exclude":{
+    "files.exclude": {
         "**/.git": true,
         "**/.idea": true,
         "**/.vscode": false,
@@ -8,7 +8,6 @@
         "**/.hg": true,
         "**/.CVS": true,
         "**/.DS_Store": true
-
     },
     // 顯示空白字元
     "editor.renderControlCharacters": true,
@@ -31,5 +30,30 @@
     },
     "workbench.panel.location": "bottom",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Default High Contrast"
+    "workbench.colorTheme": "Default High Contrast",
+    // sam 標配
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.inheritEnv": false,
+    "python.linting.pylintCategorySeverity.error": "Hint",
+    "python.linting.mypyCategorySeverity.error": "Hint",
+    "explorer.confirmDragAndDrop": false,
+    "python.formatting.autopep8Path": "",
+    "python.formatting.blackPath": "flake8",
+    "update.enableWindowsBackgroundUpdates": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "update.showReleaseNotes": false,
+    "python.autoUpdateLanguageServer": false,
+    "update.mode": "none",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "python.diagnostics.sourceMapsEnabled": true,
+    "window.zoomLevel": 0,
+    "editor.defaultFormatter": "himanoa.Python-autopep8",
+    "editor.formatOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.maxNumberOfProblems": 80,
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.foldfix": true,
 }

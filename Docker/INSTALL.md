@@ -3,7 +3,48 @@
 ## Linux
 
 
-## Windows Subsystem (WSL)
+## Windows Subsystem (WSL2)
+
+wsl2 已經完整使用 linux 內核了，所以安裝方式跟 linux 會一樣，指令如下:
+
+```
+# 信任 Docker 的 GPG 公鑰：
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# 對於 amd64 架構的計算機，添加微軟倉庫：
+sudo add-apt-repository \
+   "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+# 安装 docker
+sudo apt-get update
+sudo apt-get install docker-ce
+
+# 目前的使用者身分沒有權限去存取 docker engine, 因為 docker 的服務基本上都是以 root 的身分在執行的, 所以在指令前加 sudo 就能成功執行指令。但每次新藥打 sudo 很麻煩，透過下列指令可避免
+
+sudo usermod -aG docker $USER
+
+# 啟動 docker
+sudo service docker start
+```
+
+安裝過程中會出現，**建議使用 docker desktop for windows 20s 內按 Ctrl+C 退出**，如果要往下安裝需要等待 20s
+
+![](Image/Image4.png)
+
+安裝完後，檢查 docker 安裝是否正常
+
+```
+# 檢查 docker 是否啟動
+service docker statu
+ps aux|grep docker
+```
+
+- note:
+    - WLS2 下通過 apt install docker-ce 命令安裝的 docker 無法啟動，因為 WSL2 方式的 ubuntu 裡面沒有 systemd。上述官方 get-docker.sh 安裝的docker，dockerd 進程是用ubuntu傳統的 init 方式而非 systemd 啟動的。
+
+## Windows Subsystem (WSL1)
 
 - 手動開啟 windows Hyper-V
     - 設定 -> 應用程式與功能 -> 程式與功能 -> 開啟或關閉 Windows 功能 -> 點選 Hyper-V
@@ -53,3 +94,8 @@
 
     - Windows: Docker Desktop requires Windows 10 Pro or Enterprise version 14393 to run
     - 本次 docker 安裝是在 windows8 環境下操作，不滿足基本環境需求
+
+
+## Reference
+
+- [Windows 10 WSL 2.0安装并运行Docker](https://www.cnblogs.com/yunfeifei/p/13158845.html)

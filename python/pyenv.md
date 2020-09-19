@@ -2,8 +2,8 @@
 
 ## 安裝
 
+- install pyenv : the following method of installing is ubuntu, other linux system follwing https://github.com/pyenv/pyenv
 - curl https://pyenv.run | bash
-- git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 - echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 - echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 - echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
@@ -20,6 +20,12 @@
 - pyenv install 3.6.9: 安裝 3.6.9 版本
 - pyenv local 3.6.9: 此專案使用 3.6.9 版本
 
+
+# pipenv
+
+## 安裝
+
+- pip3 install pipenv
 
 ## pipenv 指令
 

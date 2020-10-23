@@ -1,0 +1,28 @@
+version: "3"
+services:
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.cache
+    image: image_name:dev
+    env_file: .env
+    hostname: host_name
+    command: pipenv run python finbacktesting/schedulers.py
+    deploy:                                                     ### 部屬
+      replicas: 2                                               # 2 台
+      update_config:                                            ## 更新相關設定
+        parallelism: 1                                          # 一次更新一台
+        delay: 10s                                              # 每台更新時間差 10 秒
+        failure_action: rollback                                # 更新失敗自動切回上一版成功的
+      placement:                                                ## node 相關設定
+        max_replicas_per_node: 1                                # 每個 node 最多開一台
+        constraints: [node.labels.scheduler == true]            # node label 為 scheduler 才部屬
+    restart: always
+    environment:
+      - TZ=Asia/Taipei
+    networks:
+      - rabbitmq_fin_swarm
+
+networks:
+  rabbitmq_fin_swarm:
+    external: true

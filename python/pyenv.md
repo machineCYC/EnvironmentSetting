@@ -37,7 +37,8 @@
 
 - pipenv install requests: 安裝 requests 套件
 
-- pipenv install -e project_name/ : 將 Pipfile 檔案中的 project_name 資料夾新增成 package
+- pipenv install -e . : 將該專案新增新增成 package
+    - 需要先設定 setup.py
 
 - pipenv --rm: 刪除環境
 

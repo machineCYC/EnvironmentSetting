@@ -41,6 +41,7 @@
     - 需要先設定 setup.py
 
 - pipenv --rm: 刪除環境
+    - 需要先離開環境
 
 - pipenv clean --verbose: 刪除不在 pipfile.lock 中的套件
 

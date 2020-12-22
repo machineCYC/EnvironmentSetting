@@ -115,6 +115,9 @@ python hello.py
 
 ```
 pip3 install -r requirements-to-freeze.txt
+
+Ubuntu: 因為 ubuntu 會產生錯誤版本的 package, ex:pkg-resources
+pip freeze | grep -v "pkg-resources" > requirements.txt
 ```
 
 最後利用下列指令查看並生成這個環境下所安裝的所有套件

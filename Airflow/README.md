@@ -16,7 +16,10 @@
     ```
 - 初始化 Database: Airflow 在運行需要 Database 紀錄每一次跑過的 Task 的結果
     ```
+    舊版
     airflow initdb
+    
+    airflow db init
     ```
     - Airflow 預設會使用 SQLite
 

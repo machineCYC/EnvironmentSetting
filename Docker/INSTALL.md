@@ -2,6 +2,23 @@
 
 ## Linux
 
+```
+# 安裝一些必備軟體包，這些apt軟體包可以通過HTTPS使用軟體包
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+# 官方Docker存儲庫的GPG密鑰添加到您的系統中
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# 將Docker存儲庫添加到APT源
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+
+# 安裝docker
+sudo apt update
+apt-cache policy docker-ce # 確保docker 是從 docker 除存庫來而不是從ubuntu
+sudo apt install docker-ce
+
+sudo usermod -aG docker $USER # 避免每次都sudo
+```
 
 ## Windows Subsystem (WSL2)
 
@@ -99,3 +116,5 @@ ps aux|grep docker
 ## Reference
 
 - [Windows 10 WSL 2.0安装并运行Docker](https://www.cnblogs.com/yunfeifei/p/13158845.html)
+
+- [在Ubuntu 18.04上安裝和使用Docker](https://kknews.cc/zh-tw/code/zyaz5qg.html)

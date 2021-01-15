@@ -16,7 +16,8 @@
     - Solution:
         - **Ubuntu 請先安裝**: sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
 
-- pyenv version: 查看當前版本
+- pyenv version: 查看當前 python 版本
+- pyenv versions: 查看當前所有 python 安裝版本
 - pyenv install 3.6.9: 安裝 3.6.9 版本
 - pyenv local 3.6.9: 此專案使用 3.6.9 版本
 

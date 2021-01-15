@@ -1,7 +1,10 @@
-# 安裝 MySQL 5.7.21
+# 安裝 MySQL
 
+## Linux
 
-## Download MySQL
+直接使用 docker image, 參考 docker compose ymal file
+
+## Windows - Download MySQL 5.7.21
 
 MySQL的官方網站目前提供一個完整的安裝程式，在Windows平台只要下載與安裝一個檔案，就包含資料庫伺服器和所有需要的工具軟體。你可以到這個連結準備開始下載：
 

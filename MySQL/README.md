@@ -1,5 +1,16 @@
 # MySQL
 
+## 安裝
+
+- [安裝文件](https://github.com/machineCYC/EnvironmentSetting/blob/master/MySQL/INSTALL.md)
+
+## 指令
+
+- terminal 登入 mysql server, 然後在輸入密碼
+    ```
+    mysql -u user_name -p
+    ```
+
 ## DB schema-設計原則
 
 - 不同的型態存在資料庫的容量大小會不同，因此在設計上需要先估算此張表寫入的資料量大小，再決定使用什麼型態，而不是一昧的使用最大型態。

@@ -27,6 +27,7 @@
 ## 安裝
 
 - pip3 install pipenv
+    - 每次安裝不同版本的 python 都需要安裝
 
 ## pipenv 指令
 

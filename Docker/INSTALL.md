@@ -18,6 +18,12 @@ apt-cache policy docker-ce # 確保docker 是從 docker 除存庫來而不是從
 sudo apt install docker-ce
 
 sudo usermod -aG docker $USER # 避免每次都sudo
+
+# 安裝 docker-compose
+pip install docker-compose
+
+# 查看 docker-compose 安裝狀況
+docker-compose -version
 ```
 
 ## Windows Subsystem (WSL2)

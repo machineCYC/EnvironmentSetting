@@ -38,6 +38,8 @@ docker exec -it **image_name** bash: 進到 **image_name** 的 bash
 docker exec -it **container_name** **server_name**: 進到 **container_name** 的 **server_name** 服務
     - ex: docker exec -it mysql_mysql_1 mysql -u user -p
 
+docker cp **file_path** **container_name**:**container_path**: 複製 **file_path** 到這個 continer **container_name** 的這個地方 ***container_path**
+
 ## Dockerize 應用程式
 
 - 目標: 把程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來

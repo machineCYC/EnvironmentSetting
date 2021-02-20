@@ -34,3 +34,5 @@ flower 是一個 celery 的監控工具，它提供了一個圖形使用者介�
 - [Message Queue 簡介(以 RabbitMQ 為例)](https://godleon.github.io/blog/ChatOps/message-queue-concepts/)
 
 - [Celery介绍和基本使用](https://zhuanlan.zhihu.com/p/64595171)
+
+- [Redis, Kafka or RabbitMQ: Which MicroServices Message Broker To Choose?](https://otonomo.io/redis-kafka-or-rabbitmq-which-microservices-message-broker-to-choose/?fbclid=IwAR2SoY2p5tFSQJITXG_90K4EOL4e7apjBSyOcfgvfYiPNSznD-RfR7Pn1-Q)

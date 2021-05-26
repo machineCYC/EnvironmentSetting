@@ -3,10 +3,11 @@
 ## 安裝
 
 - install pyenv : the following method of installing is ubuntu, other linux system follwing https://github.com/pyenv/pyenv
-- curl https://pyenv.run | bash
-- echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-- echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-- echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+    - curl https://pyenv.run | bash
+    - echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    - echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    - echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+- 安裝完需要重新開 terminal
 
 ## pyenv 指令
 

@@ -32,10 +32,6 @@ Linux distribution 下有分很多種 UI，比如:
             - chsh -s /bin/bash
             - chsh -s /bin/zsh
 
-- Linux 常常會有 GUI 介面無法展示的問題, ex: gitk, matplotlib plt.show ...
-    - windows subsystem linux, 參考如下解法
-        - [Show matplotlib plots in Ubuntu (Windows subsystem for Linux)](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux/INSTALL.md)
-
 - Terminal 顯示 branch name
     - 在.bashrc 新增如下
     ```
@@ -44,3 +40,15 @@ Linux distribution 下有分很多種 UI，比如:
     - 更多樣式更多樣式 [參考link](https://gist.github.com/justintv/168835)
 
 - [Ubuntu - 筆電關上不休眠](https://blog.cashwu.com/blog/ubuntu-laptops-close-lcd-not-hibbernate/)
+
+- [Linux SSH login setting](https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/)
+
+- fail2ban 防止 ssh 暴力登入攻擊
+    - [[教學] 使用fail2ban防止暴力登入攻擊](https://xenby.com/b/107-%E6%95%99%E5%AD%B8-%E4%BD%BF%E7%94%A8fail2ban%E9%98%B2%E6%AD%A2%E6%9A%B4%E5%8A%9B%E7%99%BB%E5%85%A5%E6%94%BB%E6%93%8A)
+
+
+## 常見 Bug
+
+- Linux 常常會有 GUI 介面無法展示的問題, ex: gitk, matplotlib plt.show ...
+    - windows subsystem linux, 參考如下解法
+        - [Show matplotlib plots in Ubuntu (Windows subsystem for Linux)](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux/INSTALL.md)

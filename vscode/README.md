@@ -10,6 +10,7 @@
 - GitLens
 - Git Graph
 - vscode-pdf
+- Python Docstring Generator: python function doc 生成器
 - Mithril Emmet: 前端語法快捷
 - Live Server: 網頁即時顯示
 - Beautify: 前端程式排版

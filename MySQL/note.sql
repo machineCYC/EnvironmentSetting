@@ -34,3 +34,6 @@ IGNORE 1 ROWS (col1, col2, col3, col4, col5, col6)
 
 -- 新增欄位
 alter table "Your table name" add "Column name" "Data type"
+
+-- 設定時區
+SET time_zone = 'Asia/Taipei'

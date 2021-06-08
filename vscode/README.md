@@ -4,13 +4,14 @@
 - Python
 - Python Test Explorer for Visual Studio Code: vsocde 執行測試
 - Jupyter
-- ESLint
 - Importmagic: 排版 import 部分程式
 - TODO Highlight
 - GitLens
 - Git Graph
 - vscode-pdf
 - Python Docstring Generator: python function doc 生成器
+- Remote Development: vscode 遠端開發
+- ESLint
 - Mithril Emmet: 前端語法快捷
 - Live Server: 網頁即時顯示
 - Beautify: 前端程式排版

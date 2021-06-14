@@ -35,5 +35,11 @@ IGNORE 1 ROWS (col1, col2, col3, col4, col5, col6)
 -- 新增欄位
 alter table "Your table name" add "Column name" "Data type"
 
+-- 新增 defalut timestamp 欄位(常用如 sys_update_time 欄位)
+ALTER TABLE `employee` ADD `COLUMN` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+-- 更新資料
+UPDATE 'table name' SET `column name` = 'column value' WHERE XXXX
+
 -- 設定時區
 SET time_zone = 'Asia/Taipei'

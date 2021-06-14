@@ -18,7 +18,8 @@
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
-            ]
+            ],
+            "justMyCode": false //debug with external lib
         },
         {
             "name": "Python: Attach",

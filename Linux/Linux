@@ -2,7 +2,7 @@ $ cd Documents/    指定到 Documents 文件夾下
 $ cd -             返回 home 文件夾
 $ cd ../../        返回上兩層文件夾
 
-$ ls       顯示當前目錄下所有未隱藏檔案 
+$ ls       顯示當前目錄下所有未隱藏檔案
 $ ls -l    顯示當前目錄下所有未隱藏檔案的權限、用戶、時間
 $ ls -lh   顯示當前目錄下所有未隱藏檔案的權限、用戶、時間(for humman方便觀看)
 $ ls -a    顯示當前目錄下所有檔案
@@ -12,8 +12,8 @@ $ touch file1    創建 file1 文件
 $ cp oldfile newfile             複製 oldfile 成為 newfile (不能保證重複命名不被覆蓋)
 $ cp -i oldfile newfile          複製 oldfile 成為 newfile (如果有重複文建會再次確認)
 $ cp file folder1/               複製 file 到 folder1 文件夾下
-$ cp -R folder1/ folder2/        複製 folder1 文件夾 成為 folder2 文件夾 
-$ cp file* floder2/              複製所有 file 開頭的文件到 folder2 文件夾 
+$ cp -R folder1/ folder2/        複製 folder1 文件夾 成為 folder2 文件夾
+$ cp file* floder2/              複製所有 file 開頭的文件到 folder2 文件夾
 $ cp *file floder2/              複製所有 file 結尾的文件到 folder2 文件夾
 
 $ mv file folder1/               移動 file 到 folder1 文件夾下
@@ -38,11 +38,11 @@ https://blog.gtwang.org/linux/tar-command-examples-in-linux-1/
 $ clear 清空頻幕
 
 $ chmod [誰][如何修改][文件名]
-$ chmod u+r xxx.py               增加 user 在 xxx.py read 權限 
-$ chmod u-r xxx.py               減少 user 在 xxx.py read 權限 
-$ chmod ug-w xxx.py              減少 user 和 group 在 xxx.py write 權限 
-$ chmod a-x xxx.py               減少所有人(user group other)在 xxx.py excute 權限 
-如果想要用 ./t.py 執行 t.py 必須先增加x權限，並增加 #!/usr/bin/python3 在.py最上面，告訴電腦要用什麼來運行 
+$ chmod u+r xxx.py               增加 user 在 xxx.py read 權限
+$ chmod u-r xxx.py               減少 user 在 xxx.py read 權限
+$ chmod ug-w xxx.py              減少 user 和 group 在 xxx.py write 權限
+$ chmod a-x xxx.py               減少所有人(user group other)在 xxx.py excute 權限
+如果想要用 ./t.py 執行 t.py 必須先增加x權限，並增加 #!/usr/bin/python3 在.py最上面，告訴電腦要用什麼來運行
 
 $ ifconfig                                用來查詢ip位置
 
@@ -57,5 +57,7 @@ $ sudo apt-get install python-scipy
 $ sudo apt install python3-pip
 
 $ sudo apt-get install ibus-zhuyin #注音輸入法
+
+$ curl -D- ipinfo.io: 查詢外部 ip
 
 PuTTY(https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) window 版 ssh

@@ -2,18 +2,35 @@
 
 This repository contains some install file of tools for data analysis, machine learning, and deep learning.
 
-[tensorflow GPU](https://github.com/machineCYC/EnvironmentSetting/tree/master/GPU)
+## [Database](https://github.com/machineCYC/EnvironmentSetting/tree/master/Database)
 
-[Ubuntu 16.04.3 LTS](https://github.com/machineCYC/EnvironmentSetting/blob/master/Linux)
+- [MySQL](https://github.com/machineCYC/EnvironmentSetting/tree/master/Database/MySQL)
 
-[MySQL](https://github.com/machineCYC/EnvironmentSetting/blob/master/MySQL/MySQL)
+- [Splunk](https://github.com/machineCYC/EnvironmentSetting/tree/master/Database/Splunk)
 
-[Hadoop](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop)
+- [Redis](https://github.com/machineCYC/EnvironmentSetting/tree/master/Database/Redis)
 
-[Splunk](https://github.com/machineCYC/EnvironmentSetting/tree/master/Splunk)
+- [Dolphindb](https://github.com/machineCYC/EnvironmentSetting/tree/master/Database/dolphindb)
 
-[Git](https://github.com/machineCYC/EnvironmentSetting/tree/master/Git)
 
-[Python](https://github.com/machineCYC/EnvironmentSetting/tree/master/python)
+## Operating System
 
-[vscode](https://github.com/machineCYC/EnvironmentSetting/tree/master/vscode)
+- [Linux](https://github.com/machineCYC/EnvironmentSetting/tree/master/Linux)
+
+- [Windows](https://github.com/machineCYC/EnvironmentSetting/tree/master/Windows)
+
+
+## Others
+- [tensorflow GPU](https://github.com/machineCYC/EnvironmentSetting/tree/master/GPU)
+
+- [Hadoop](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop)
+
+- [Docker](https://github.com/machineCYC/EnvironmentSetting/tree/master/Docker)
+
+- [Git](https://github.com/machineCYC/EnvironmentSetting/tree/master/Git)
+
+- [Python](https://github.com/machineCYC/EnvironmentSetting/tree/master/python)
+
+- [vscode](https://github.com/machineCYC/EnvironmentSetting/tree/master/vscode)
+
+- [RabbitMQ](https://github.com/machineCYC/EnvironmentSetting/tree/master/RabbitMQ)

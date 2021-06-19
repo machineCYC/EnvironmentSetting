@@ -2,7 +2,7 @@
 
 ## 安裝
 
-- [安裝文件](https://github.com/machineCYC/EnvironmentSetting/blob/master/MySQL/INSTALL.md)
+- [安裝文件](https://github.com/machineCYC/EnvironmentSetting/blob/master/Database/MySQL/INSTALL.md)
 
 ## 指令
 

@@ -73,6 +73,8 @@ github action 提供多種情境 (自動測試、自動發布 package) 的 yml f
 
 - [Publishing Docker images](https://docs.github.com/en/actions/guides/publishing-docker-images)
 
+- [Get github secrets to env variable](https://github.com/docker/build-push-action/issues/390)
+
 - [What is a Webhook?](https://codeburst.io/what-are-webhooks-b04ec2bf9ca2)
 
 - [Using self-hosted runners in a workflow](https://docs.github.com/en/actions/hosting-your-own-runners/using-self-hosted-runners-in-a-workflow)

@@ -15,12 +15,13 @@ This repository contains some install file of tools for data analysis, machine l
 
 ## Operating System
 
-- [Linux](https://github.com/machineCYC/EnvironmentSetting/tree/master/Linux)
+- [Linux](https://github.com/machineCYC/EnvironmentSetting/tree/master/OperatingSystem/Linux)
 
-- [Windows](https://github.com/machineCYC/EnvironmentSetting/tree/master/Windows)
+- [Windows](https://github.com/machineCYC/EnvironmentSetting/tree/master/OperatingSystem/Windows)
 
 
 ## Others
+
 - [tensorflow GPU](https://github.com/machineCYC/EnvironmentSetting/tree/master/GPU)
 
 - [Hadoop](https://github.com/machineCYC/EnvironmentSetting/tree/master/Hadoop)

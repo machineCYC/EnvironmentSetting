@@ -67,6 +67,12 @@ github action 提供多種情境 (自動測試、自動發布 package) 的 yml f
 
     ```
 
+
+## worker setting
+
+    - use self host will pull repo when running test in CI process
+        - repo location is in ~/actions-runner/_work/**project name**/**project name**
+
 ## Reference
 
 - [[Node.js] GitHub 使用 Travis-CI 自動化單元測試](https://andy6804tw.github.io/2018/03/16/travis-ci-tutorial/)

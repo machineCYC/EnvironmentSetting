@@ -40,6 +40,14 @@ docker exec -it **container_name** **server_name**: 進到 **container_name** �
 
 docker cp **file_path** **container_name**:**container_path**: 複製 **file_path** 到這個 continer **container_name** 的這個地方 ***container_path**
 
+docker logs **container_id**: 展示 **container_id** 中的 log
+
+echo "$PASSWORD" | docker login -u **user_name** --password-stdin: 透過環境變數登入 docker 帳號(-p 這參數在未來會不能用)
+
+docker login -u **user_name**: 兩段式登入，在打密碼(可用token 取代密碼)
+
+docker logout: 登出 docker 帳號
+
 ## Dockerize 應用程式
 
 - 目標: 把程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來
@@ -74,13 +82,14 @@ docker cp **file_path** **container_name**:**container_path**: 複製 **file_pat
 
 ## Swarn
 
-- portainer
+- 指令
+    - docker swarm init: swarm 初始化
+    - docker stack deploy -c **XXX.yml file** **stack_name**: 啟動XXX.yml 服務且 stack 名稱為 stack_name
+        - ex: docker stack deploy -c portainer.yml por: 啟動 portainer 和 ui 介面
+    - docker swarm join-token worker
+        - 在 manager 機器 show 連結語法, 讓 worker 可以透過這個語法跟 manager 連結
 
-- docker swarm init: swarm 初始化
-
-- docker stack deploy -c docker-stack.yml portainer
-
-- docker swarm leave --force : 結束 swarm
+    - docker swarm leave --force : 結束 swarm
 
 ## Reference
 
@@ -91,3 +100,7 @@ docker cp **file_path** **container_name**:**container_path**: 複製 **file_pat
 - [dockerize application](https://larrylu.blog/step-by-step-dockerize-your-app-ecd8940696f4)
 
 - [Docker 中刪除 Images 鏡像 及 Containers](https://www.opencli.com/linux/docker-delete-images-containers)
+
+- [Docker login 驗證錯誤解決辦法](https://ug.epurs.com/post/docker-login-error-saving-credentials/)
+
+- [Setting github secrets with docker/build-push-action](https://github.com/docker/build-push-action/issues/390)

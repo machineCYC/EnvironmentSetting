@@ -60,4 +60,6 @@ $ sudo apt-get install ibus-zhuyin #注音輸入法
 
 $ curl -D- ipinfo.io: 查詢外部 ip
 
+$ adduser zacdata: 新增 user 並新增 user 資料夾和設定 user 密碼
+
 PuTTY(https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) window 版 ssh

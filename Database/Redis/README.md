@@ -59,6 +59,9 @@ rs = redis.StrictRedis(
         - use redis srarch with secondary index
             - ex: FT.SEARCH **index name** "@column1:XXX" SORTBY Timestamp LIMIT 0 10
 
+## 常用應用
+
+- [redis-cluster-docker](https://github.com/machineCYC/redis-cluster-docker)
 
 ## GUI 介面 medis
 

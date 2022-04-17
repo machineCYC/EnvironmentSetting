@@ -1,3 +1,4 @@
+# Install Minikube
 
 ## Install Minikube prerequisites
 

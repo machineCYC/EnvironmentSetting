@@ -104,3 +104,5 @@ docker logout: 登出 docker 帳號
 - [Docker login 驗證錯誤解決辦法](https://ug.epurs.com/post/docker-login-error-saving-credentials/)
 
 - [Setting github secrets with docker/build-push-action](https://github.com/docker/build-push-action/issues/390)
+
+- [Docker CMD 與 ENTRYPOINT 說明詳解](https://myapollo.com.tw/zh-tw/docker-cmd-vs-entrypoint/)

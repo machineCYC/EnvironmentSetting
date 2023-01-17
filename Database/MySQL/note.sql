@@ -21,6 +21,33 @@ CREATE TABLE table_name (
     PRIMARY KEY (col1, col2)
 );
 
+-- create table with date partition
+CREATE TABLE `JobLoadControl` (
+    date DATE NOT NULL DEFAULT CURRENT_DATE,
+    crawler_name VARCHAR(50),
+    parameter TEXT,
+    queue VARCHAR(10),
+    process_type VARCHAR(15),
+    status VARCHAR(10),
+    SYS_CREATE_TIME DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (date, crawler_name, SYS_CREATE_TIME)
+)
+    PARTITION BY RANGE (to_days(date))(
+        PARTITION p20221109 VALUES LESS THAN (to_days('2022-11-09')),
+        PARTITION p20221110 VALUES LESS THAN (to_days('2022-11-10')),
+        PARTITION pMAX VALUES LESS THAN MAXVALUE
+    );
+
+-- update the table partition
+-- partition by range
+ALTER TABLE JobLoadControl
+PARTITION BY RANGE (to_days(date))(
+    PARTITION p20221109 VALUES LESS THAN (to_days('2022-11-09')),
+    PARTITION p20221110 VALUES LESS THAN (to_days('2022-11-10')),
+    PARTITION pMAX VALUES LESS THAN MAXVALUE
+);
+
+
 -- 刪除資料表
 DROP TABLE table_name;
 
@@ -43,3 +70,6 @@ UPDATE 'table name' SET `column name` = 'column value' WHERE XXXX
 
 -- 設定時區
 SET time_zone = 'Asia/Taipei'
+
+-- get table partition
+SELECT * FROM information_schema.partitions WHERE TABLE_SCHEMA='Monitor' AND TABLE_NAME = 'JobLoadControl' AND PARTITION_NAME IS NOT NULL

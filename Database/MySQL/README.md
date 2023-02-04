@@ -35,3 +35,5 @@
 - [mysql-db-schema-設計原則](https://blog.johnsonlu.org/mysql-db-schema-%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87/)
 
 - [mysql 官方文件](https://dev.mysql.com/doc/)
+
+- [MySQL Partitioning 優化之路](https://medium.com/17live-tech/mysql-partitioning-%E5%84%AA%E5%8C%96%E4%B9%8B%E8%B7%AF-fd8e8480789b)

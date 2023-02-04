@@ -47,6 +47,40 @@ PARTITION BY RANGE (to_days(date))(
     PARTITION pMAX VALUES LESS THAN MAXVALUE
 );
 
+-- modify partition
+ALTER TABLE `JobLoadControl` REORGANIZE PARTITION pMAX INTO (
+    PARTITION p20221111 VALUES LESS THAN (to_days('2022-11-11')),
+    PARTITION pMAX VALUES LESS THAN MAXVALUE
+);
+
+-- mysql store procedure
+DELIMITER $$
+CREATE PROCEDURE `spPartitionJobLoadControl`(partition_date VARCHAR(10))
+BEGIN
+    START TRANSACTION;
+    SET @t=CONCAT(
+        'ALTER TABLE `JobLoadControl` REORGANIZE PARTITION pMax INTO (',
+        'PARTITION p',
+        DATE_FORMAT(partition_date, '%Y%m%d'),
+        ' VALUES LESS THAN ','(',
+        to_days(DATE_FORMAT(partition_date, '%Y-%m-%d')),
+        '),',
+        'PARTITION pMax VALUES LESS THAN MAXVALUE);');
+    SELECT @t;
+    PREPARE stmt FROM @t;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+    COMMIT;
+END$$
+DELIMITER ;
+
+-- mysql scheduler event
+CREATE EVENT `spPartitionJobLoadControl_event`
+ON SCHEDULE EVERY '1' DAY
+STARTS CURDATE()
+DO
+CALL spPartitionJobLoadControl(DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 1 DAY), '%Y-%m-%d'));
+
 
 -- 刪除資料表
 DROP TABLE table_name;

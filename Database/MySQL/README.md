@@ -37,3 +37,5 @@
 - [mysql 官方文件](https://dev.mysql.com/doc/)
 
 - [MySQL Partitioning 優化之路](https://medium.com/17live-tech/mysql-partitioning-%E5%84%AA%E5%8C%96%E4%B9%8B%E8%B7%AF-fd8e8480789b)
+
+- [RDB Query Optimization-postgres-sql](https://blog.douenergy.com/what-is-the-postgres-sql-game-plan-i/)

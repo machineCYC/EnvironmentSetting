@@ -26,6 +26,7 @@ poetry will install in the below folder
 - poetry shell: 啟動 poetry python 環境
 - exit: 離開 poetry python 環境
 - poetry add black: 安裝 black lib
+    - poetry add black --dev: 安裝 black lib 在 dev-dependencies 區塊
 - poetry install: 安裝 poetry.lock 中的 lib (包括當下 folder 加入python path)
 - poetry env remove python: 移除當下python 環境
 - poetry export -f requirements.txt -o requirements.txt --without-hashes --dev: 產生 requirements.txt file
@@ -33,4 +34,4 @@ poetry will install in the below folder
 
 ## Reference
 
-- [](https://blog.kyomind.tw/python-poetry/)
+- [最佳 Python 套件管理器——Poetry 完全入門指南](https://blog.kyomind.tw/python-poetry/)

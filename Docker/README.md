@@ -86,6 +86,8 @@ docker logout: 登出 docker 帳號
     - docker swarm init: swarm 初始化
     - docker stack deploy -c **XXX.yml file** **stack_name**: 啟動XXX.yml 服務且 stack 名稱為 stack_name
         - ex: docker stack deploy -c portainer.yml por: 啟動 portainer 和 ui 介面
+    - docker stack rm <stack name>
+        - ex: docker stack rm por
     - docker swarm join-token worker
         - 在 manager 機器 show 連結語法, 讓 worker 可以透過這個語法跟 manager 連結
 

@@ -48,6 +48,8 @@ docker login -u **user_name**: 兩段式登入，在打密碼(可用token 取代
 
 docker logout: 登出 docker 帳號
 
+docker rmi $(docker images -f "dangling=true" -q): delete none images
+
 ## Dockerize 應用程式
 
 - 目標: 把程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來

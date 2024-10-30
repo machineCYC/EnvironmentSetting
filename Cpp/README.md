@@ -7,5 +7,13 @@
     - ./<complie file name>, e.g. ./test
 
 
+- get variable memory position
+    - &<variable name>
+
+- get memory position value
+    - *<variable name with memory position>
 
 
+# Reference
+
+- [C++ 進階 教學 - CPP Road](https://cpproadadvanced.blogspot.com/)

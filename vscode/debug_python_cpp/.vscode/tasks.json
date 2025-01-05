@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "label": "Build C Library",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-shared",
+                "-o",
+                "libexample.so",
+                "-fPIC",
+                "-g",
+                "example.c"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

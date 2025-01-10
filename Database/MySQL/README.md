@@ -81,3 +81,5 @@
 - [MySQL Partitioning 優化之路](https://medium.com/17live-tech/mysql-partitioning-%E5%84%AA%E5%8C%96%E4%B9%8B%E8%B7%AF-fd8e8480789b)
 
 - [RDB Query Optimization-postgres-sql](https://blog.douenergy.com/what-is-the-postgres-sql-game-plan-i/)
+
+- [淺入淺出 MySQL](https://vicxu.medium.com/%E6%B7%BA%E5%85%A5%E6%B7%BA%E5%87%BA-mysql-ep1-%E6%88%91%E7%9A%84-sql-%E6%80%8E%E9%BA%BC%E5%84%B2%E5%AD%98%E6%88%91%E7%9A%84%E8%B3%87%E6%96%99-46f95af4ab7a)

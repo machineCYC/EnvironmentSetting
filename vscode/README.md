@@ -15,6 +15,7 @@
 - Mithril Emmet: 前端語法快捷
 - Live Server: 網頁即時顯示
 - Beautify: 前端程式排版
+- Markdown Preview Mermaid Support: mermaid show in vscode
 
 # 安装 pip
 
